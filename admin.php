@@ -22,11 +22,10 @@ $app->get('/admin/login', function() {
 		"footer"=>false
 	]);
 
-	$page->setTpl("login"); //nome que deu para o arquivo html
+	$page->setTpl("login");
 
 });
 
-//Validar o login
 $app->post('/admin/login', function(){
 
 	User::login($_POST["login"], $_POST["password"]);
