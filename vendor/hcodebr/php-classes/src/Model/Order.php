@@ -40,14 +40,14 @@ use \Hcode\Model;
 				INNER JOIN tb_users d ON d.iduser = a.iduser
 				INNER JOIN tb_addresses e USING(idaddress)
 				INNER JOIN tb_persons f ON f.idperson = d.idperson
-				WHERE a.idorder = :idorder
-				", [
+				WHERE a.idorder = :idorder",
+				 [
 					':idorder'=>$idorder
 				]);
 
 			if (count($results) > 0){
 
-				$this->setata($results[0]);
+				$this->setData($results[0]);
 
 			}
 
