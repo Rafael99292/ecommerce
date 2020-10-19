@@ -305,6 +305,12 @@ class Cart extends Model {
 
 	}
 
+	public static function removeFromSession(){
+
+    	$_SESSION[Cart::SESSION] = NULL;
+
+	}	
+
 }
 
  ?>
